@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-node';
 import vercel from '@sveltejs/adapter-vercel';
 import dotenv from 'dotenv';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { relative, sep } from 'node:path';
 
 dotenv.config();
@@ -9,6 +10,7 @@ const isVercel = !!process.env.VERCEL;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	preprocess: [vitePreprocess({ script: true })],
 	kit: { adapter: isVercel ? vercel() : adapter(), experimental: { remoteFunctions: true } },
 	compilerOptions: {
 		experimental: { async: true },
