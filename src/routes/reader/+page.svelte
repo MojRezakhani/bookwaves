@@ -229,8 +229,7 @@
 												id={'edit-data-' + item.id}
 												class="textarea-bordered textarea h-24"
 												bind:value={editData}
-												placeholder="{m.enter_tag_data()}..."
-											></textarea>
+												placeholder="{m.enter_tag_data()}..."></textarea>
 											<div class="flex gap-2">
 												<button
 													class="btn flex-1 btn-sm btn-primary"
