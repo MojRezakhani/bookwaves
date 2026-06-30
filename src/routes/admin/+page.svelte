@@ -218,7 +218,9 @@
 									<button class="btn btn-primary" onclick={handleLogin} disabled={!!busyAction}
 										>{m.login()}</button
 									>
-									<button class="btn" onclick={handleLogout} disabled={!!busyAction}>{m.logout()}</button>
+									<button class="btn" onclick={handleLogout} disabled={!!busyAction}
+										>{m.logout()}</button
+									>
 									{#if loginStatus}
 										<span class="text-sm font-semibold text-success">{loginStatus}</span>
 									{/if}

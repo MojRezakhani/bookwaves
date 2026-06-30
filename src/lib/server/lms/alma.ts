@@ -966,7 +966,7 @@ export class AlmaLMS implements LibraryManagementSystem {
 
 		if (!parsedItemData.success) {
 			logger.error({ issues: parsedItemData.issues }, 'Parsed return item data error');
-			return { ok: false, reasonKey: 'error_invalid_return_data'};
+			return { ok: false, reasonKey: 'error_invalid_return_data' };
 		}
 
 		const mediaItem = this.mapItemToMediaItem(parsedItemData.output, barcode);

@@ -4,10 +4,7 @@ import YAML from 'yaml';
 import { type LogLevel, parseLogLevel } from '$lib/logger/levels';
 
 export type LoginMode =
-	| 'username_password'
-	| 'username_only'
-	| 'scanner_only'
-	| 'username_or_scanner';
+	'username_password' | 'username_only' | 'scanner_only' | 'username_or_scanner';
 
 export type LoginValidationImplementation = 'campus_id';
 

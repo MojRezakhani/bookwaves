@@ -203,9 +203,9 @@
 		if (result?.ok) {
 			processed.status = 'success';
 			const msgFn = result.messageKey
-      			? (m as unknown as Record<string, () => string>)[result.messageKey]
-      			: undefined;
-  			processed.message = msgFn?.() ?? result.message ?? m.successfully_returned_message();
+				? (m as unknown as Record<string, () => string>)[result.messageKey]
+				: undefined;
+			processed.message = msgFn?.() ?? result.message ?? m.successfully_returned_message();
 			processed.directive =
 				result.directive ?? processed.directive ?? mediaItem?.returnDirective ?? null;
 			// Refresh the RFIDItem to show updated status

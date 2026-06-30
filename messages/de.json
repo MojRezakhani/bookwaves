@@ -175,7 +175,6 @@
 	"item_not_found_in_lms_message": "Artikel nicht im Bibliothekssystem gefunden",
 	"awaiting_lms_response_message": "Verarbeitung...",
 	"unexpected_error_lending_message": "Unerwarteter Fehler beim Ausleihen des Artikels",
-	
 
 	"session": "Sitzung",
 	"library": "Bibliothek",
@@ -200,7 +199,6 @@
 	"error_unexpected_return": "Unerwarteter Fehler beim Zurückgeben",
 	"error_failed_to_return": "Zurückgeben fehlgeschlagen",
 	"preparing_to_return_message": "Vorbereitung der Rückgabe...",
-
 
 	"secure_failure_message": "Fehler beim Entsichern des Artikels nach der Ausleihe",
 	"lending_failure_message": "Fehler beim Ausleihen des Artikels",

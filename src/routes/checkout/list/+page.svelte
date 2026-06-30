@@ -128,7 +128,8 @@
 			<div class="mb-6 alert alert-warning shadow-lg">
 				<div>
 					<strong>{m.reader_not_configured()}</strong>
-					{readerWarning} {m.contact_staff()}
+					{readerWarning}
+					{m.contact_staff()}
 				</div>
 				<a
 					class="btn btn-ghost btn-sm"
