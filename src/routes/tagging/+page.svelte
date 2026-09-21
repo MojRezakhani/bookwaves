@@ -3,7 +3,12 @@
 	import { onMount } from 'svelte';
 	import type { RFIDData, RFIDReader } from '$lib/reader/interface';
 	import ReaderSelector from '$lib/components/ReaderSelector.svelte';
-	import { getSelectedReaderConfig, createReaderFromSelection } from '$lib/stores/reader-selection';
+	import {
+		getSelectedReaderConfig,
+		createReaderFromSelection,
+		getSelectedFormat,
+		setSelectedFormat
+	} from '$lib/stores/reader-selection';
 	import { Circle, CircleX, SquarePen } from '@lucide/svelte';
 	import { clientLogger } from '$lib/client/logger';
 	import MockReaderOverlay from '$lib/components/MockReaderOverlay.svelte';
@@ -36,6 +41,8 @@
 	);
 
 	onMount(async () => {
+		const savedFormat = getSelectedFormat();
+        if (savedFormat) holder = savedFormat;
 		initializeReader();
 	});
 
@@ -302,6 +309,7 @@
 							id="format-select"
 							class="input-bordered input w-full input-lg"
 							bind:value={holder}
+							onchange={() => setSelectedFormat(holder)}
 							disabled={writing}
 						>
 							{#each data.taggingFormats as taggingFormat}
