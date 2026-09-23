@@ -24,6 +24,16 @@ export function setSelectedReaderConfig(middleware: string, reader: string): voi
 	localStorage.setItem('selectedReader', reader);
 }
 
+export function getSelectedFormat(): string | null {
+	if (typeof window === 'undefined') return null;
+	return localStorage.getItem('selectedFormat');
+}
+
+export function setSelectedFormat(format: string): void {
+	if (typeof window === 'undefined') return;
+	localStorage.setItem('selectedFormat', format);
+}
+
 export function getSelectedReaderConfig(): {
 	middleware: string;
 	reader: string;
